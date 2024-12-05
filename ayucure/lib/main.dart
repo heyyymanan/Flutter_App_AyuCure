@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(MyApp());
@@ -28,7 +29,7 @@ class Homepage_state extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            title: Text('AyuCure',style: TextStyle(color: Colors.white),),
+            title: Text('AyuCure',style: GoogleFonts.corinthia(textStyle: TextStyle(color: Colors.white))),
             backgroundColor: Colors.black),
         body: Column(
           children: [
@@ -39,14 +40,40 @@ class Homepage_state extends State<MyHomePage> {
                   onPressed: (){}, child: Icon(Icons.search,size: 30,color: Colors.black,)),
                 Expanded(flex:6,child: TextField(decoration: InputDecoration(border: InputBorder.none),)),
                     Text("|",style: TextStyle(fontWeight:FontWeight.bold,fontSize: 25)),
-                    Expanded(flex:1,child: Icon(Icons.filter_list,size: 30))
+                    Expanded(flex:1,child: Icon(Icons.filter_list,size: 30)),
                   ])),
-          SizedBox(height: 50),
-          // Container(height:500,width: 500,decoration: BoxDecoration(color: Colors.red),)
-          // Container(
-          //   margin: EdgeInsets.all(20),padding: EdgeInsets.zero,
-          //   decoration: BoxDecoration(borderRadius: BorderRadius.circular(300),color: Colors.black),
-          //     child: Image.asset('assets/SaleBanner.jpg',))
+            SizedBox(height: 30),
+            Container(
+                      width: 375, // Set the width of the container
+                      height: 180, // Set the height of the container
+                      decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20.0), // Round the edges
+                      image: DecorationImage(
+                      image: AssetImage('assets/SaleBanner.jpg'), // Replace with your image asset path
+                      fit: BoxFit.cover, // Adjust the image fit
+                      ))),
+            SizedBox(height: 30),
+            SingleChildScrollView(scrollDirection: Axis.horizontal,
+              child:Row(
+              children: [
+                SizedBox(width:20),
+                  OutlinedButton(onPressed: (){}, child: Text("All")),
+                  SizedBox(width:10),
+                  OutlinedButton(onPressed: (){}, child: Text("Joints")),
+                SizedBox(width:10),
+                  OutlinedButton(onPressed: (){}, child: Text("Tonics")),
+                SizedBox(width:10),
+                  OutlinedButton(onPressed: (){}, child: Text("Immunity")),
+                SizedBox(width:10),
+                  OutlinedButton(onPressed: (){}, child: Text("Muscle")),
+
+                ])
+              ),
+
+
+
+
+
           ],)
 
 
