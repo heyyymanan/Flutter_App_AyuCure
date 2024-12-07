@@ -16,7 +16,7 @@ class _LoginState extends State<Login> {
     final width=MediaQuery.of(context).size.width;
     final height=MediaQuery.of(context).size.height;
     return Scaffold(
-        backgroundColor: Color(0xFF00100),
+        backgroundColor: Color(0xFF000000),
         body: Column(
           children: [
             Container(
