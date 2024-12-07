@@ -1,3 +1,4 @@
+import 'package:ayucure/pages/CreateAccount.dart';
 import 'package:ayucure/pages/home.dart';
 import 'package:ayucure/pages/login.dart';
 import 'package:flutter/material.dart';
@@ -20,10 +21,10 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        'l':(context)=>MyHomePage(),
+        'h':(context)=>MyHomePage(),
         't':(context)=>gridtest(),
-        '/':(context)=>Login(),
-
+        'l':(context)=>Login(),
+        '/':(context)=>CreateAccount(),
       }
     )
     );
