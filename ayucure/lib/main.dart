@@ -1,4 +1,5 @@
 import 'package:ayucure/pages/home.dart';
+import 'package:ayucure/pages/login.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -20,7 +21,8 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/':(context)=>MyHomePage(),
-        'k':(context)=>gridtest(),
+        't':(context)=>gridtest(),
+        'l':(context)=>Login(),
       }
     )
     );
