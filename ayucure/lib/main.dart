@@ -20,9 +20,9 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/':(context)=>MyHomePage(),
+        'l':(context)=>MyHomePage(),
         't':(context)=>gridtest(),
-        'l':(context)=>Login(),
+        '/':(context)=>Login(),
       }
     )
     );

@@ -50,7 +50,7 @@ class Homepage extends State<MyHomePage> {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20.0), // Round the edges
                       image: DecorationImage(
-                        image: AssetImage('assets/SaleBanner.jpg'), // Replace with your image asset path
+                        image: AssetImage('assets/media/SaleBanner.jpg'), // Replace with your image asset path
                         fit: BoxFit.cover, // Adjust the image fit
                       ))),
 
