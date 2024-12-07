@@ -16,7 +16,7 @@ class _LoginState extends State<Login> {
     final width=MediaQuery.of(context).size.width;
     final height=MediaQuery.of(context).size.height;
     return Scaffold(
-        backgroundColor: Color(0xFF582F0E),
+        backgroundColor: Color(0xFF00100),
         body: Column(
           children: [
             Container(
@@ -29,7 +29,7 @@ class _LoginState extends State<Login> {
                   child: ClipRRect(
                           borderRadius:BorderRadius.only(bottomRight:Radius.circular(60),
                               bottomLeft:Radius.circular(60) ),
-                          child: Image.asset('assets/media/12.1.jpg', fit: BoxFit.fill)),
+                          child: Image.asset('assets/media/12.2.jpg', fit: BoxFit.fill)),
                 ),
                   Positioned(
                     left: ((width/2)/100)*65,
@@ -59,7 +59,7 @@ class _LoginState extends State<Login> {
                           textStyle: TextStyle(
                               // fontWeight: FontWeight.bold,
                               color: Colors.white,
-                              fontSize: width/8)),),
+                              fontSize: width/9)),),
                     ),
                   ),
                   Positioned(
@@ -77,9 +77,44 @@ class _LoginState extends State<Login> {
                 ]),
             ),
           Container(
+            padding: EdgeInsets.all(10),
             width: width,
             height: (height/100)*25,
-            child: Container()
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                OutlinedButton.icon(onPressed: (){},
+                    label: Text('Continue With Google',style: GoogleFonts.roboto(
+                            textStyle: TextStyle(
+                            fontSize: 25,
+                            color: Colors.white))),
+                    icon: Image.asset('assets/icons/Google.png'),
+                    style: ButtonStyle(
+                      fixedSize: WidgetStateProperty.all(Size(width-70, 50)),
+                      backgroundColor: WidgetStateProperty.all(Colors.transparent),
+                    elevation: WidgetStateProperty.all(10),
+                    shadowColor: WidgetStateProperty.all(Colors.black),
+                    side: WidgetStateProperty.all(
+                        BorderSide(width: 1.5,color: Colors.grey))
+                    ),
+                    ),OutlinedButton.icon(onPressed: (){},
+                    label: Text('Create Account',style: GoogleFonts.roboto(
+                            textStyle: TextStyle(
+                            fontSize: 25,
+                            color: Colors.white))),
+                    icon: FaIcon(Icons.account_circle,size: 40,color: Colors.white,),
+                    style: ButtonStyle(
+                      fixedSize: WidgetStateProperty.all(Size(width-120, 50)),
+                      backgroundColor: WidgetStateProperty.all(Colors.brown),
+                    elevation: WidgetStateProperty.all(10),
+                    shadowColor: WidgetStateProperty.all(Colors.black),
+                    side: WidgetStateProperty.all(
+                        BorderSide(width: 1,color: Colors.brown))
+                    ),
+                    ),
+                ]
+            )
           ),
 
 
