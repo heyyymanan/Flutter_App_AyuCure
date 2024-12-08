@@ -2,7 +2,10 @@ import 'package:ayucure/pages/login.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class RegisterPage extends StatelessWidget {
+class Createaccount extends StatelessWidget {
+  void check_cred(){
+
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +23,7 @@ class RegisterPage extends StatelessWidget {
                     IconButton(
                       icon: const Icon(Icons.arrow_back, color: Colors.green),
                       onPressed: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>Login()));
+                        Navigator.pop(context);
                       },
                     ),
                   ],

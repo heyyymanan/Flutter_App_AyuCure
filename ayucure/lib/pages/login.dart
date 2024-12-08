@@ -1,3 +1,5 @@
+import 'package:ayucure/pages/CreateAccount.dart';
+import 'package:ayucure/pages/home.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -32,6 +34,16 @@ class _LoginState extends State<Login> {
                                 bottomLeft:Radius.circular(60) ),
                             child: Image.asset('assets/media/12.2.jpg', fit: BoxFit.fill)),
                   ),
+                    Positioned(
+                        top: (height)/100*5,
+                        right: (width)/100*2,
+                        child: TextButton(onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
+                    }, child: Text('Skip >>',style: GoogleFonts.tinos(textStyle: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                          fontWeight: FontWeight.bold
+                        ))))),
                     Positioned(
                       left: ((width/2)/100)*65,
                       right: ((width/2)/100)*35,
@@ -100,7 +112,7 @@ class _LoginState extends State<Login> {
                           BorderSide(width: 1.5,color: Colors.grey))
                       ),
                       ),OutlinedButton.icon(onPressed: (){
-                        Navigator.pop(context);
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Createaccount()));
                   },
                       label: Text('Create Account',style: GoogleFonts.roboto(
                               textStyle: TextStyle(

@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../main.dart';
 
-class MyHomePage extends StatefulWidget {
+class HomePage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => Homepage();
 }
-class Homepage extends State<MyHomePage> {
+class Homepage extends State<HomePage> {
 
   List product=[
     'assets/products/1.jpg',
