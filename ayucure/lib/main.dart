@@ -1,6 +1,7 @@
 import 'package:ayucure/pages/CreateAccount.dart';
 import 'package:ayucure/pages/home.dart';
 import 'package:ayucure/pages/login.dart';
+import 'package:ayucure/pages/splash.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -23,8 +24,9 @@ class MyApp extends StatelessWidget {
       routes: {
         'h':(context)=>HomePage(),
         'c':(context)=>Createaccount(),
-        '/':(context)=>Login(),
+        'l':(context)=>Login(),
         't':(context)=>Test(),
+        '/':(context)=>splash(),
       }
     )
     );

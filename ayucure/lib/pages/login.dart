@@ -100,7 +100,7 @@ class _LoginState extends State<Login> {
                   OutlinedButton.icon(onPressed: (){},
                       label: Text('Continue With Google',style: GoogleFonts.roboto(
                               textStyle: TextStyle(
-                              fontSize: 25,
+                              fontSize: ((width)/100)*5,
                               color: Colors.white))),
                       icon: Image.asset('assets/icons/Google.png'),
                       style: ButtonStyle(
@@ -116,7 +116,7 @@ class _LoginState extends State<Login> {
                   },
                       label: Text('Create Account',style: GoogleFonts.roboto(
                               textStyle: TextStyle(
-                              fontSize: 25,
+                              fontSize: ((width)/100)*5,
                               color: Colors.white))),
                       icon: FaIcon(Icons.account_circle,size: 40,color: Colors.white,),
                       style: ButtonStyle(

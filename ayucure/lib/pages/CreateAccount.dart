@@ -12,7 +12,7 @@ class Createaccount extends StatelessWidget {
       body: SingleChildScrollView(
         child: SafeArea(
           child: Padding(
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.only(left: 20,right: 20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
