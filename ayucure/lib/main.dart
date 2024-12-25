@@ -24,8 +24,8 @@ class MyApp extends StatelessWidget {
         'h':(context)=>HomePage(),
         'c':(context)=>Createaccount(),
         'l':(context)=>Login(),
-        't':(context)=>Test(),
-        '/':(context)=>splash(),
+        '/':(context)=>LoginPage(),
+        '':(context)=>splash(),
       }
     )
     );
