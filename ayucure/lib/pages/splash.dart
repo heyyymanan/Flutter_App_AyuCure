@@ -2,6 +2,7 @@ import 'package:ayucure/pages/home.dart';
 import 'package:ayucure/pages/login.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 
 class splash extends StatefulWidget{
   @override
@@ -13,7 +14,7 @@ class _splashState extends State<splash> {
   void initState() {
      super.initState();
     // Navigate to main screen after delay
-    Future.delayed(Duration(seconds: 3), () {
+    Future.delayed(Duration(seconds: 1), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => Login()),
@@ -23,8 +24,9 @@ class _splashState extends State<splash> {
 
   @override
   Widget build(BuildContext context) {
+    final double width= MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.black,
       body: Container(
         height: double.infinity,
         width: double.infinity,
@@ -36,11 +38,16 @@ class _splashState extends State<splash> {
                 padding: EdgeInsets.all(10),
                 child: Column(
               children: [
-                Image.asset('assets/logo/4.png'),
-                SizedBox(height: 30),
-                Text("From",style: GoogleFonts.corinthia(textStyle: TextStyle(fontSize: 50))),
-                Text("ShreeJi Remedies",style: GoogleFonts.corinthia(textStyle: TextStyle(fontSize: 50))),
-
+                AnimatedTextKit(
+                  animatedTexts: [
+                    TyperAnimatedText(
+                      'AyuCure',
+                      textStyle: GoogleFonts.corinthia(textStyle: TextStyle(fontSize: 100,color: Colors.white)),
+                      speed: Duration(milliseconds: 50),
+                    ),
+                  ],
+                  totalRepeatCount: 1, // Repeat once
+                ),
               ],
             )),
 

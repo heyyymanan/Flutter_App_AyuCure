@@ -4,7 +4,6 @@ import 'package:ayucure/pages/login.dart';
 import 'package:ayucure/pages/splash.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import 'Test_Pages/gridtest_1.dart';
 
 void main() {
