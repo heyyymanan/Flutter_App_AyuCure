@@ -26,13 +26,13 @@ class _LoginState extends State<Login> {
                 child: Stack(
                   children:[
                     Container(
-                    padding: EdgeInsets.only(right: 0,left: 0,top: 0),
+                      margin: EdgeInsets.only(right: 0,left: 0,top: 0),
                     height: (height/100)*75,
                     width: width,
                     child: ClipRRect(
                             borderRadius:BorderRadius.only(bottomRight:Radius.circular(60),
                                 bottomLeft:Radius.circular(60) ),
-                            child: Image.asset('assets/media/12.2.jpg', fit: BoxFit.fill)),
+                            child: Image.asset('assets/media/12.2b.jpg', fit: BoxFit.fill)),
                   ),
                     Positioned(
                         top: (height)/100*5,
@@ -68,25 +68,25 @@ class _LoginState extends State<Login> {
                       right: ((width/2)/100)*10,
                       top: (height/100)*57,
                       child: Center(
-                        child: Text('Have We Met',style: GoogleFonts.elsie(
+                        child: Text('Have We Met\n     Before ?',style: GoogleFonts.sourceSerif4(
                             textStyle: TextStyle(
                                 // fontWeight: FontWeight.bold,
                                 color: Colors.white,
                                 fontSize: width/9)),),
                       ),
                     ),
-                    Positioned(
-                      left: ((width/2)/100)*10,
-                      right: ((width/2)/100)*10,
-                      top: (height/100)*65,
-                      child: Center(
-                        child: Text('Before ?',style: GoogleFonts.elsie(
-                            textStyle: TextStyle(
-                                // fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                                fontSize: width/9)),),
-                      ),
-                    )
+                    // Positioned(
+                    //   left: ((width/2)/100)*10,
+                    //   right: ((width/2)/100)*10,
+                    //   top: (height/100)*65,
+                    //   child: Center(
+                    //     child: Text('Before ?',style: GoogleFonts.elsie(
+                    //         textStyle: TextStyle(
+                    //             // fontWeight: FontWeight.bold,
+                    //             color: Colors.white,
+                    //             fontSize: width/9)),),
+                    //   ),
+                    // )
                   ]),
               ),
             Container(
@@ -114,7 +114,7 @@ class _LoginState extends State<Login> {
                       ),OutlinedButton.icon(onPressed: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context)=>Createaccount()));
                   },
-                      label: Text('Create Account',style: GoogleFonts.roboto(
+                      label: Text('Login / Sign Up',style: GoogleFonts.roboto(
                               textStyle: TextStyle(
                               fontSize: ((width)/100)*5,
                               color: Colors.white))),

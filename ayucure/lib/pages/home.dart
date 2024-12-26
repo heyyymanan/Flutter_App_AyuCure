@@ -1,5 +1,6 @@
 import 'package:ayucure/main.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../main.dart';
 
@@ -23,8 +24,45 @@ class Homepage extends State<HomePage> {
   Widget build(BuildContext context) {
     final width=MediaQuery.of(context).size.width;
     return Scaffold(
-
+        drawer: Drawer(
+          backgroundColor:Colors.white,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children:[ DrawerHeader(
+              margin: EdgeInsets.only(top: 0,bottom: 15),
+                padding: EdgeInsets.zero,
+                child: UserAccountsDrawerHeader(
+                  decoration: BoxDecoration(gradient:
+                  LinearGradient(colors: [Color(0xffff023e8a),Color(0xff00b4d8)])),
+                  margin: EdgeInsets.only(top: 0),
+                  currentAccountPicture: CircleAvatar(
+                      backgroundImage: AssetImage('assets/media/avatar.jpg')),
+                  accountName: Text('Manan Vyas',style: TextStyle(color: Colors.white),),
+                accountEmail: Text('mananindia5@gmail.com',style: TextStyle(color: Colors.white)),
+            )),
+              ListTile(
+                leading: FaIcon(FontAwesomeIcons.box,size:30,color: Colors.black,),
+                title: Text('Your Orders',style: TextStyle(fontSize: 30,color: Colors.black))),
+              ListTile(
+                  leading: FaIcon(FontAwesomeIcons.gear,color: Colors.black,size: 30),
+                  title: Text('Settings',style: TextStyle(fontSize: 30,color: Colors.black))),
+              ListTile(
+                  leading: FaIcon(FontAwesomeIcons.circleExclamation,size:30,color: Colors.black,),
+                  title: Text('About',style: TextStyle(fontSize: 30,color: Colors.black))),
+              SizedBox(height: 250),
+              Container(
+                  width: double.infinity, // Set the width to match the screen
+                  height: 45, // Set a specific height
+                  margin: EdgeInsets.all(85),
+                  child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
+                      onPressed: (){},
+                  child: Text('LOGOUT',style: TextStyle(fontSize: 20,color: Colors.white),)))
+            ]),
+        ),
         appBar: AppBar(
+          iconTheme: IconThemeData(color: Colors.white),
             centerTitle: true,
             title: Text('AyuCure',style: GoogleFonts.corinthia(textStyle:TextStyle(color: Colors.white,fontSize: 45))),
             backgroundColor: Colors.black),

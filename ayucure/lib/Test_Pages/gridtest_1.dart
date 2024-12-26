@@ -1,4 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:ayucure/functions/navigator.dart';
+import 'package:ayucure/pages/login.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -96,7 +98,7 @@ class LoginScreen extends StatelessWidget {
               style: ElevatedButton.styleFrom(elevation: 10,side: BorderSide(width: 1))
               ),
               SizedBox(width: 40),
-              ElevatedButton(onPressed: () => _showBottomSheet(context, "Sign Up"),
+              ElevatedButton(onPressed: (){navigateTo(context, Login());},
                   child: Text('Sign Up',style: TextStyle(fontSize: 30),),
                   style: ElevatedButton.styleFrom(elevation: 10,side: BorderSide(width: 1))
               ),

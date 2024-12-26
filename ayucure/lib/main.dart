@@ -21,11 +21,11 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        'h':(context)=>HomePage(),
+        '/':(context)=>HomePage(),
         'c':(context)=>Createaccount(),
-        'l':(context)=>Login(),
-        '/':(context)=>LoginPage(),
-        '':(context)=>splash(),
+        'p':(context)=>Login(),
+        'l':(context)=>LoginPage(),
+        's':(context)=>splash(),
       }
     )
     );
