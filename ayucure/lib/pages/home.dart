@@ -42,23 +42,31 @@ class Homepage extends State<HomePage> {
                 accountEmail: Text('mananindia5@gmail.com',style: TextStyle(color: Colors.white)),
             )),
               ListTile(
-                leading: FaIcon(FontAwesomeIcons.box,size:30,color: Colors.black,),
-                title: Text('Your Orders',style: TextStyle(fontSize: 30,color: Colors.black))),
+                splashColor: Colors.grey,
+                onTap: (){},
+                leading: FaIcon(FontAwesomeIcons.box,size:25,color: Colors.black,),
+                title: Text('Your Orders',style: TextStyle(fontSize: 25,color: Colors.black))),
               ListTile(
-                  leading: FaIcon(FontAwesomeIcons.gear,color: Colors.black,size: 30),
-                  title: Text('Settings',style: TextStyle(fontSize: 30,color: Colors.black))),
+                  splashColor: Colors.grey,
+                  onTap: (){},
+                  leading: FaIcon(FontAwesomeIcons.gear,color: Colors.black,size: 25),
+                  title: Text('Settings',style: TextStyle(fontSize: 25,color: Colors.black))),
               ListTile(
-                  leading: FaIcon(FontAwesomeIcons.circleExclamation,size:30,color: Colors.black,),
-                  title: Text('About',style: TextStyle(fontSize: 30,color: Colors.black))),
+                  splashColor: Colors.grey,
+                  onTap: (){},
+                  leading: FaIcon(FontAwesomeIcons.circleExclamation,size:25,color: Colors.black,),
+                  title: Text('About',style: TextStyle(fontSize: 25,color: Colors.black))),
               SizedBox(height: 250),
               Container(
                   width: double.infinity, // Set the width to match the screen
                   height: 45, // Set a specific height
-                  margin: EdgeInsets.all(85),
-                  child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
+                  margin: EdgeInsets.all(90),
+                  child: OutlinedButton(
+                      style: ElevatedButton.styleFrom(
+                        side: BorderSide(width: 2),
+                          backgroundColor: Colors.white, elevation: 5),
                       onPressed: (){},
-                  child: Text('LOGOUT',style: TextStyle(fontSize: 20,color: Colors.white),)))
+                  child: Text('LOGOUT',style: TextStyle(fontSize: 18,color: Colors.black),)))
             ]),
         ),
         appBar: AppBar(
