@@ -67,6 +67,7 @@ flutter:
     - assets/media/
     - assets/icons/
     - assets/products/
+    - assets/PF/
     - assets/shreeji_product/
 #     - images/a_dot_ham.jpeg
 
