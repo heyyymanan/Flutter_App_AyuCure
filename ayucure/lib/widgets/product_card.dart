@@ -21,6 +21,7 @@ class Product_card extends StatelessWidget {
     final double width = MediaQuery.of(context).size.width;
     final String path = 'assets/PF/$product_no.jpg';
 
+
     return FutureBuilder<Map<String, dynamic>>(
       future: _fetchProductDetails(),
       builder: (context, snapshot) {
@@ -32,6 +33,14 @@ class Product_card extends StatelessWidget {
           return Center(child: Text('Product not found'));
         } else {
           final product = snapshot.data!;
+          String discount = ((1 - product['fmrp'] / product['pmrp']) * 100).toStringAsFixed(0);
+          bool isdiscount;
+          if(discount=='0'||int.parse(discount)<5||product['pmrp']<product['fmrp']) {
+            isdiscount = false;
+          }
+          else{
+            isdiscount=true;
+          }
           return Column(
             children: [
               InkWell(
@@ -70,7 +79,7 @@ class Product_card extends StatelessWidget {
                       ]),
                     ),
                     Container(
-                      height: 100,
+                      height: 120,
                       width: width / 2.2,
                       color: Color(0xffEDE0D4),
                       child: Column(
@@ -86,19 +95,25 @@ class Product_card extends StatelessWidget {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              Text('₹ ${product['fmrp']}',
-                                  textAlign: TextAlign.start,
+                              Text('₹${product['fmrp']}',
+                                  textAlign: TextAlign.center,
                                   style: TextStyle(fontSize: 25, color: Colors.black)),
-                              Text('₹${product['pmrp']}',
-                                  textAlign: TextAlign.start,
-                                  style: TextStyle(
-                                      fontSize: 15,
-                                      decoration: TextDecoration.lineThrough,
-                                      color: Colors.grey)),
-                              Text(
-                                  '${((1 - product['fmrp'] / product['pmrp']) * 100).toStringAsFixed(0)}% OFF',
-                                  textAlign: TextAlign.start,
-                                  style: TextStyle(fontSize: 15, color: Colors.redAccent)),
+                              if(isdiscount)
+                                Column(
+                                children: [
+                                  Text('₹${product['pmrp']}',
+                                      textAlign: TextAlign.start,
+                                      style: TextStyle(
+                                          fontSize: 15,
+                                          decoration: TextDecoration.lineThrough,
+                                          color: Colors.grey)),
+                                  Text(
+                                      '$discount% OFF',
+                                      textAlign: TextAlign.start,
+                                      style: TextStyle(fontSize: 15, color: Colors.redAccent)),
+                                ],
+                              ),
+
                             ],
                           ),
                         ],

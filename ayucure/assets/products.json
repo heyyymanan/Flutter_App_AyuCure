@@ -1,18 +1,67 @@
 {
   "products": {
     "1": {
+      "name": "Byna Oil",
       "qty": "100ml",
-      "fmrp": 180,
-      "pmrp": 280,
-      "use": "Joint Pain | Inflammation",
-      "name": "Byna Oil"
+      "fmrp": 125,
+      "pmrp": 125,
+      "use": "Joint Pain | Inflammation"
     },
+
     "2": {
+      "name": "Byna Capsule",
+      "qty": "30x6 Caps.",
+      "fmrp": 1135,
+      "pmrp": 1200,
+      "use": "Joint Pain | Inflammation"
+    },
+
+    "3": {
+      "name": "Imlon-C Tablet",
+      "qty": "10 x 10 Caps",
+      "fmrp": 305,
+      "pmrp": 340,
+      "use": "Gas | Acidity | HeartBurn"
+    },
+
+    "4": {
+      "name": "Chaleshwari",
+      "qty": "5ml",
+      "fmrp": 20,
+      "pmrp": 20,
+      "use": "Stomatitis"
+    },
+
+    "5": {
+      "name": "Kalyani Syrup",
       "qty": "200ml",
-      "fmrp": 250,
-      "pmrp": 300,
-      "use": "Skin Care",
-      "name": "Skin Glow Oil"
+      "fmrp": 120,
+      "pmrp": 140,
+      "use": "Mentrual Health"
+    },
+
+    "6": {
+      "name": "Spruehit Tablet",
+      "qty": "10 x 10 Tabs.",
+      "fmrp": 220,
+      "pmrp": 140,
+      "use": "Diarrhoea  | Dysentery"
+    },
+
+    "7": {
+      "name": "Spruehit Syrup",
+      "qty": "30ml",
+      "fmrp": 55,
+      "pmrp": 140,
+      "use": "Diarrhoea  | Dysentery"
+    },
+
+    "8": {
+      "name": "Byna Syrup",
+      "qty": "200ml",
+      "fmrp": 200,
+      "pmrp": 140,
+      "use": "Joint Pain | Inflammation"
     }
   }
 }
