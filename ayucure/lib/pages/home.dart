@@ -21,7 +21,9 @@ class Homepage extends State<HomePage> {
         appBar: AppBar(
           iconTheme: IconThemeData(color: Colors.white),
             centerTitle: true,
-            title: Text('AyuCure',style: GoogleFonts.corinthia(textStyle:TextStyle(color: Colors.white,fontSize: 45))),
+            title: Text('AyuCure',
+                style: GoogleFonts.corinthia(
+                    textStyle:TextStyle(color: Colors.white,fontSize: 45))),
             backgroundColor: Colors.black),
         body: SingleChildScrollView(
           child: Column(
@@ -67,7 +69,19 @@ class Homepage extends State<HomePage> {
                   Product_card(product_no: '7'),
                   Product_card(product_no: '8')
 
-                ],)
+                ],),
+              Container(
+                margin: EdgeInsets.only(bottom: 10),
+                padding: EdgeInsets.only(top: 0),
+                height: 55,
+                width: width,
+                child: Text(
+                  'Ayucure',
+                  textAlign: TextAlign.center,
+                  style: GoogleFonts.corinthia(
+                      textStyle: TextStyle(color: Colors.grey,fontSize: 40)),),
+              )
+              
             ],),
         )
     );

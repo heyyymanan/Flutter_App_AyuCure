@@ -1,4 +1,5 @@
 import 'package:ayucure/pages/CreateAccount.dart';
+import 'package:ayucure/pages/Product_detail.dart';
 import 'package:ayucure/pages/home.dart';
 import 'package:ayucure/pages/login.dart';
 import 'package:ayucure/pages/splash.dart';
@@ -21,10 +22,10 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/':(context)=>HomePage(),
+        'h':(context)=>HomePage(),
         'c':(context)=>Createaccount(),
         'p':(context)=>Login(),
-        // '':(context)=>(),
+        '/':(context)=>Product_detail(),
         's':(context)=>splash(),
       }
     )
