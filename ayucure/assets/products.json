@@ -1,0 +1,18 @@
+{
+  "products": {
+    "1": {
+      "qty": "100ml",
+      "fmrp": 180,
+      "pmrp": 280,
+      "use": "Joint Pain | Inflammation",
+      "name": "Byna Oil"
+    },
+    "2": {
+      "qty": "200ml",
+      "fmrp": 250,
+      "pmrp": 300,
+      "use": "Skin Care",
+      "name": "Skin Glow Oil"
+    }
+  }
+}
