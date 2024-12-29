@@ -36,22 +36,7 @@ class _Product_detailState extends State<Product_detail> {
               child: PageView.builder(
                 itemCount: images.length,
                 itemBuilder: (context, index) {
-                  return Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black26,
-                          blurRadius: 5,
-                          offset: Offset(0, 5),
-                        ),
-                      ],
-                    ),
-                    child: Image.asset(
-                      images[index],
-                      fit: BoxFit.cover,
-                    ),
-                  );
+                  return  Image.asset(images[index], fit: BoxFit.cover);
                 },
               )
             ),
@@ -75,11 +60,6 @@ class _Product_detailState extends State<Product_detail> {
                           ),
                       ),
                     ),
-                    Text('Byna Tablet',
-                      style: GoogleFonts.aboreto(
-                          textStyle:TextStyle(fontSize: 30,
-                              color: Colors.black) ),
-                    ),
                     InkWell(
                       onTap: (){},
                       child: Container(
@@ -95,19 +75,168 @@ class _Product_detailState extends State<Product_detail> {
                   ],
                 ),
               ),
+              Positioned(
+                bottom: 15,
+                right: 15,
+                child: Container(
+                  padding: EdgeInsets.all(5),
+                  decoration: BoxDecoration(
+                    color: Colors.white38,
+                    borderRadius: BorderRadius.circular(50)
+                  ),
+                  height: 30,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Icon(CupertinoIcons.star_lefthalf_fill,
+                          color: Colors.yellow,
+                      size: 15),
+                      SizedBox(width: 5),
+                      Text('4.5 Rating ',
+                      style: TextStyle(fontWeight: FontWeight.bold,fontSize: 11),
+                      )
+                      
+                    ],
+                  )
+
+                ),
+              )
           ]),
         Container(
-          padding: EdgeInsets.all(8),
-          child: Row(
+          // color: Colors.red,
+          padding: EdgeInsets.only(top:10,right: 13,left: 10),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Byna Tablet | 100ml',
-              style: TextStyle(fontSize: 30),),
-              InkWell(
-                child: Icon(CupertinoIcons.heart),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text('Byna Tablet | 100ml',
+                  style: GoogleFonts.arapey(textStyle: TextStyle(fontSize: 35))),
+                  InkWell(
+                    onTap: (){},
+                    child: Icon(CupertinoIcons.heart,size: 35),
+                  )]),
+              Text('100 ml',
+                style: TextStyle(fontSize: 20,color: Colors.grey),
               )
             ],
+          )
+        ),
+          Container(
+            padding: EdgeInsets.only(top:15,left: 15),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text('₹120.00',
+                style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),
+                ),
+                Container(
+                  padding: EdgeInsets.all(1),
+                  decoration: BoxDecoration(
+                    color: Colors.purple[100],
+                    borderRadius: BorderRadius.circular(20)
+                  ),
+                  margin: EdgeInsets.only(right: 20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Icon(CupertinoIcons.bolt),
+                        Text(' Fast Delivery Within 24 Hrs.')
+                      ],
+                    ))
+              ],
+            ),
           ),
-        )
+          Container(
+            width: double.maxFinite,
+            height: 270,
+            color: Colors.redAccent,
+            child: Column(
+              children: [
+                Container(
+                  // color: Colors.redAccent,
+                  width:double.maxFinite,
+                  margin: EdgeInsets.only(left: 15,top: 15),
+                  child: Wrap(
+                    spacing: 10,
+                    runSpacing: 10,
+                    alignment: WrapAlignment.start,
+                    children: [
+                      Text('Relieves : ',
+                      style: GoogleFonts.arapey(
+                          textStyle:TextStyle(fontSize: 20,color: Colors.green[700],fontWeight: FontWeight.bold))
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(top: 3,bottom: 1),
+                        padding: EdgeInsets.only(top: 1,bottom: 1,right: 5,left: 5),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(50),
+                          color: Colors.grey[300]
+                        ),
+                        child: Text('Join Pain'),
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(top: 3,bottom: 1),
+                        padding: EdgeInsets.only(top: 1,bottom: 1,right: 5,left: 5),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(50),
+                          color: Colors.grey[300]
+                        ),
+                        child: Text('Imflamation'),
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(top: 3,bottom: 1),
+                        padding: EdgeInsets.only(top: 1,bottom: 1,right: 5,left: 5),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(50),
+                            color: Colors.grey[300]
+                        ),
+                        child: Text('Imflamation'),
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(top: 3,bottom: 1),
+                        padding: EdgeInsets.only(top: 1,bottom: 1,right: 5,left: 5),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(50),
+                            color: Colors.grey[300]
+                        ),
+                        child: Text('Imflamation'),
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(top: 3,bottom: 1),
+                        padding: EdgeInsets.only(top: 1,bottom: 1,right: 5,left: 5),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(50),
+                            color: Colors.grey[300]
+                        ),
+                        child: Text('Imflamation'),
+                      ),
+
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ),
+          Container(
+            height: 50,
+            color: Colors.blue,
+            child: Row(
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.grey,
+                    borderRadius: BorderRadius.circular(20)
+                  ),
+                )
+              ],
+            ),
+
+          )
+
         ])
 
     )
