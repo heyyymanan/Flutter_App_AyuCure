@@ -1,10 +1,10 @@
+import 'package:ayucure/pages/Cart.dart';
 import 'package:ayucure/pages/CreateAccount.dart';
 import 'package:ayucure/pages/Product_detail.dart';
 import 'package:ayucure/pages/home.dart';
 import 'package:ayucure/pages/login.dart';
 import 'package:ayucure/pages/splash.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'Test_Pages/gridtest_1.dart';
 
 void main() {
@@ -25,8 +25,8 @@ class MyApp extends StatelessWidget {
         'h':(context)=>HomePage(),
         'c':(context)=>Createaccount(),
         'p':(context)=>Login(),
-        '/':(context)=>Product_detail(),
-        's':(context)=>splash(),
+        'l':(context)=>Product_detail(),
+        '/':(context)=>Cart(),
       }
     )
     );
