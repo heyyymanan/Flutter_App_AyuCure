@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'package:ayucure/functions/MediaQuery_size.dart';
 import 'package:ayucure/functions/navigator.dart';
 import 'package:ayucure/pages/home.dart';
@@ -5,6 +6,7 @@ import 'package:ayucure/widgets/Add_to_cart_with_goto_cart.dart';
 import 'package:ayucure/widgets/Item_counter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 class SectionTitle extends StatelessWidget {
   final String title;
@@ -48,6 +50,14 @@ class Product_detail extends StatefulWidget{
   @override
   State<Product_detail> createState() => _Product_detailState();
 }
+  List products = [];
+
+  // Load JSON data
+    void load_img() async {
+      final String jsonString = await rootBundle.loadString('assets/p_images.json');
+      final Map<String, dynamic> jsonResponse = json.decode(jsonString);
+      products = jsonResponse['products'];
+    }
 
 class _Product_detailState extends State<Product_detail> {
   bool isliked=false;
@@ -58,13 +68,10 @@ class _Product_detailState extends State<Product_detail> {
     else if(isliked)
       isliked=false;
   }
+
   @override
   Widget build(BuildContext context) {
-    final images=[
-      'assets/PF/1.jpg',
-      'assets/PF/2.jpg',
-      'assets/PF/3.jpg',
-    ];
+    load_img();
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black,
@@ -91,14 +98,14 @@ class _Product_detailState extends State<Product_detail> {
           children: [
             Stack(
               children:[ Container(
-                height: context.percentWidth(70),
+                height: context.percentHeight(35),
                 width: context.percentWidth(100),
                 child: PageView.builder(
-                  itemCount: images.length,
+                  itemCount: products.length,
                   itemBuilder: (context, index) {
                     return  ClipRRect(
                         borderRadius: BorderRadius.only(bottomRight: Radius.circular(20),bottomLeft: Radius.circular(20)),
-                        child: Image.asset(images[index], fit: BoxFit.cover));
+                        child: Image.asset(products[index]['images']['p_rectangle'], fit: BoxFit.cover));
                   },
                 )
               ),

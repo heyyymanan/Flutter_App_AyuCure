@@ -18,7 +18,7 @@ class _CartState extends State<Cart> {
               style: GoogleFonts.corinthia(
                   textStyle:TextStyle(color: Colors.white,fontSize: 45))),
           backgroundColor: Colors.black),
-      bottomSheet: ,
+      // bottomSheet: ,
     );
   }
 }
