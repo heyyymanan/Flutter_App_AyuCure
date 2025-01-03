@@ -1,0 +1,84 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "1",
+            "images": {
+                "p_square": "assets/products/1024x1024/1.jpg",
+                "p_rectangle": "assets/products/1080x840/1.jpg"
+            }
+        },
+        {
+            "id": 2,
+            "name": "2",
+            "images": {
+                "p_square": "assets/products/1024x1024/2.jpg",
+                "p_rectangle": "assets/products/1080x840/2.jpg"
+            }
+        },
+        {
+            "id": 3,
+            "name": "3",
+            "images": {
+                "p_square": "assets/products/1024x1024/3.jpg",
+                "p_rectangle": "assets/products/1080x840/3.jpg"
+            }
+        },
+        {
+            "id": 4,
+            "name": "4",
+            "images": {
+                "p_square": "assets/products/1024x1024/4.jpg",
+                "p_rectangle": "assets/products/1080x840/4.jpg"
+            }
+        },
+        {
+            "id": 5,
+            "name": "5",
+            "images": {
+                "p_square": "assets/products/1024x1024/5.jpg",
+                "p_rectangle": "assets/products/1080x840/5.jpg"
+            }
+        },
+        {
+            "id": 6,
+            "name": "6",
+            "images": {
+                "p_square": "assets/products/1024x1024/6.jpg",
+                "p_rectangle": "assets/products/1080x840/6.jpg"
+            }
+        },
+        {
+            "id": 7,
+            "name": "7",
+            "images": {
+                "p_square": "assets/products/1024x1024/7.jpg",
+                "p_rectangle": "assets/products/1080x840/7.jpg"
+            }
+        },
+        {
+            "id": 8,
+            "name": "8",
+            "images": {
+                "p_square": "assets/products/1024x1024/8.jpg",
+                "p_rectangle": "assets/products/1080x840/8.jpg"
+            }
+        },
+        {
+            "id": 9,
+            "name": "9",
+            "images": {
+                "p_square": "assets/products/1024x1024/9.jpg",
+                "p_rectangle": "assets/products/1080x840/9.jpg"
+            }
+        },
+        {
+            "id": 10,
+            "name": "10",
+            "images": {
+                "p_square": "assets/products/1024x1024/10.jpg",
+                "p_rectangle": "assets/products/1080x840/10.jpg"
+            }
+        }
+    ]
+}
