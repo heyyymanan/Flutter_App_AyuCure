@@ -25,8 +25,8 @@ class MyApp extends StatelessWidget {
         'l':(context)=>HomePage(),
         'c':(context)=>Createaccount(),
         'p':(context)=>Login(),
-        '/':(context)=>Product_detail(),
-        '':(context)=>Cart(),
+        'o':(context)=>Product_detail(),
+        '/':(context)=>Cart(),
       }
     )
     );

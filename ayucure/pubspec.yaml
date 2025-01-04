@@ -68,6 +68,7 @@ flutter:
     - assets/products.json
     - assets/p_images.json
     - assets/products/1080x840/
+    - assets/products/1024x1024/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

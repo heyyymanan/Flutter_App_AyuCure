@@ -1,6 +1,6 @@
 import 'package:ayucure/functions/MediaQuery_size.dart';
 import 'package:ayucure/functions/navigator.dart';
-import 'package:ayucure/pages/login.dart';
+import 'package:ayucure/pages/Cart.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -37,7 +37,7 @@ class _Dynamic_addtocartState extends State<Dynamic_addtocart>
       onTap: () {
         setState(() {
           if (isAdded) {
-            // navigateTo(context, Login());
+            navigateTo(context, Cart());
           } else {
             _controller.forward();
             isAdded=true;
@@ -56,13 +56,13 @@ class _Dynamic_addtocartState extends State<Dynamic_addtocart>
                 ..rotateX(angle),
               alignment: Alignment.center,
               child: angle < 1.5708 // Show content conditionally based on angle
-                  ? _buildButton(context, 'Add To Cart', Colors.lightGreen,
-                  CupertinoIcons.cart_fill)
+                  ? _buildButton(context, 'Add To Cart', Colors.redAccent,
+                  CupertinoIcons.cart)
                   : Transform(
                 alignment: Alignment.center,
                 transform: Matrix4.identity()..rotateX(3.1416), // Rotate back side to normal
-                child: _buildButton(context, 'Go To Cart', Colors.green,
-                    CupertinoIcons.checkmark_alt),
+                child: _buildButton(context, 'Go To Cart', Colors.lightGreen,
+                    CupertinoIcons.check_mark_circled),
               ),
             );
           },

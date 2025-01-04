@@ -87,7 +87,11 @@ class _Product_detailState extends State<Product_detail> {
         child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Item_counter(), //Custom
+        Item_counter(
+        height: context.percentHeight(6),
+        width: context.percentWidth(35),
+        margin: EdgeInsets.only(bottom: 10, left: 20),
+      ), //Custom
               Dynamic_addtocart()
             ]
         ),
