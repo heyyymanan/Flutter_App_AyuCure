@@ -4,10 +4,13 @@ import 'package:ayucure/pages/Product_detail.dart';
 import 'package:ayucure/pages/home.dart';
 import 'package:ayucure/pages/login.dart';
 import 'package:ayucure/pages/splash.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'Test_Pages/gridtest_1.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 

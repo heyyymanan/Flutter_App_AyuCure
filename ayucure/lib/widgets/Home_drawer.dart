@@ -1,3 +1,5 @@
+import 'package:ayucure/functions/navigator.dart';
+import 'package:ayucure/pages/login.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class Home_drawer extends StatelessWidget{
@@ -44,7 +46,9 @@ class Home_drawer extends StatelessWidget{
                     style: ElevatedButton.styleFrom(
                         side: BorderSide(width: 2),
                         backgroundColor: Colors.white, elevation: 5),
-                    onPressed: (){},
+                    onPressed: (){
+                      navigateTo(context, Login());
+                    },
                     child: Text('LOGOUT',style: TextStyle(fontSize: 18,color: Colors.black),)))
           ]),
     );
