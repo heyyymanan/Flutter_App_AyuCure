@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "470842902675",
+    "project_id": "ayucure-46cce",
+    "storage_bucket": "ayucure-46cce.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:470842902675:android:ecb9d24b84de7c7b01a566",
+        "android_client_info": {
+          "package_name": "com.example.ayucure"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhTWYca-UKGywoZg1veZlN5aNmfGWC0iA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
