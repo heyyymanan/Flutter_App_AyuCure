@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 class test extends StatelessWidget {
   final CollectionReference _productsCollection =
-  FirebaseFirestore.instance.collection('/products');
+  FirebaseFirestore.instance.collection('products');
 
 
   @override
@@ -34,7 +34,7 @@ class test extends StatelessWidget {
           return ListView.builder(
             itemCount: products.length,
             itemBuilder: (context, index) {
-              final product = products[index+1];
+              final product = products[index];
               final data = product.data() as Map<String, dynamic>;
 
               return Card(
@@ -47,14 +47,14 @@ class test extends StatelessWidget {
                     fit: BoxFit.cover,
                   ),
                   title: Text(data['p_name'] ?? "No Name"),
-                  subtitle: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text("Price: ₹${data['p_mrpf']} (MRP: ₹${data['p_mrpb']})"),
-                      Text("Rating: ${data['p_rating']} ⭐"),
-                      Text("Stock: ${data['p_stock']}"),
-                    ],
-                  ),
+                  // subtitle: Column(
+                  //   crossAxisAlignment: CrossAxisAlignment.start,
+                  //   children: [
+                  //     Text("Price: ₹${data['p_mrpf']} (MRP: ₹${data['p_mrpb']})"),
+                  //     Text("Rating: ${data['p_rating']} ⭐"),
+                  //     Text("Stock: ${data['p_stock']}"),
+                  //   ],
+                  // ),
                 ),
               );
             },

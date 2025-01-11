@@ -28,12 +28,12 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        'l':(context)=>HomePage(),
+        '/':(context)=>HomePage(),
         'c':(context)=>Createaccount(),
         'p':(context)=>Login(),
         'o':(context)=>Product_detail(),
         'i':(context)=>Cart(),
-        '/':(context)=>test(),
+        'k':(context)=>test(),
       }
     )
     );

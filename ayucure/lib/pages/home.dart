@@ -60,14 +60,7 @@ class Homepage extends State<HomePage> {
               Wrap(spacing: 10,
                 runSpacing: 10,
                 children: [
-                  Product_card(product_no: '1'),
-                  Product_card(product_no: '2'),
-                  Product_card(product_no: '3'),
-                  Product_card(product_no: '4'),
-                  Product_card(product_no: '5'),
-                  Product_card(product_no: '6'),
-                  Product_card(product_no: '7'),
-                  Product_card(product_no: '8')
+                  Product_card(product_no: 0)
 
                 ],),
               Container(
