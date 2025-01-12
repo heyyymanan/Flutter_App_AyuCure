@@ -44,8 +44,8 @@ class Product_card extends StatelessWidget {
 
         // Handle missing fields with default values
         final String name = data['p_name'] ?? 'Unknown Product';
-        final String use = data['p_cure'] ?? 'No description available';
-        final String imageUrl = data['p_img'] ?? '';
+        final String use = data['p_use'] ?? 'No description available';
+        final String imageUrl = data['p_img_1x1'] ?? '';
         final bool isDiscount = data['isdiscount'] ?? false;
         final int discount = data['p_discount'] ?? 0;
         final int price = data['f_mrp'] ?? 0;
@@ -160,7 +160,7 @@ class Product_card extends StatelessWidget {
                 width: width / 2.2,
                 decoration: const BoxDecoration(
                   // color: Color(0xff7f5539),
-                  color: Colors.redAccent,
+                  color: Colors.red,
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(10),
                     bottomRight: Radius.circular(10),

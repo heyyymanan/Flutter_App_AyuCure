@@ -1,65 +1,73 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class test extends StatelessWidget {
-  final CollectionReference _productsCollection =
-  FirebaseFirestore.instance.collection('products');
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: CopyProductScreen(),
+    );
+  }
+}
 
+class CopyProductScreen extends StatefulWidget {
+  @override
+  _CopyProductScreenState createState() => _CopyProductScreenState();
+}
+
+class _CopyProductScreenState extends State<CopyProductScreen> {
+  final FirebaseFirestore _firestore = FirebaseFirestore.instance;
+  int currentDocId = 2; // Start from "2" or wherever you'd like
+
+  // Function to copy data from one document to another
+  Future<void> copyProduct(String sourceId, int destinationId) async {
+    try {
+      // Fetch the source document
+      DocumentSnapshot sourceDoc =
+      await _firestore.collection('products').doc(sourceId).get();
+
+      if (sourceDoc.exists) {
+        // Copy the data to the destination document
+        await _firestore
+            .collection('products')
+            .doc(destinationId.toString())
+            .set(sourceDoc.data() as Map<String, dynamic>);
+
+        print("Product copied to products/$destinationId successfully!");
+      } else {
+        print("Source product does not exist.");
+      }
+    } catch (error) {
+      print("Error copying product: $error");
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Products"),
+        title: Text("Copy Firestore Document"),
         centerTitle: true,
       ),
-      body: StreamBuilder<QuerySnapshot>(
-        stream: _productsCollection.snapshots(),
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return Center(child: CircularProgressIndicator());
-          }
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () async {
+            // Call the function to copy `product/1` to the next destination document
+            await copyProduct('1', currentDocId);
 
-          if (snapshot.hasError) {
-            return Center(child: Text("Error: ${snapshot.error}"));
-          }
+            // Increment the document ID for the next copy
+            setState(() {
+              currentDocId++;
+            });
 
-          if (!snapshot.hasData || snapshot.data!.docs.isEmpty) {
-            return Center(child: Text("No products available"));
-          }
-
-          final products = snapshot.data!.docs;
-
-          return ListView.builder(
-            itemCount: products.length,
-            itemBuilder: (context, index) {
-              final product = products[index];
-              final data = product.data() as Map<String, dynamic>;
-
-              return Card(
-                margin: EdgeInsets.all(8),
-                child: ListTile(
-                  leading: Image.network(
-                    data['p_img'],
-                    width: 50,
-                    height: 50,
-                    fit: BoxFit.cover,
-                  ),
-                  title: Text(data['p_name'] ?? "No Name"),
-                  // subtitle: Column(
-                  //   crossAxisAlignment: CrossAxisAlignment.start,
-                  //   children: [
-                  //     Text("Price: ₹${data['p_mrpf']} (MRP: ₹${data['p_mrpb']})"),
-                  //     Text("Rating: ${data['p_rating']} ⭐"),
-                  //     Text("Stock: ${data['p_stock']}"),
-                  //   ],
-                  // ),
-                ),
-              );
-            },
-          );
-        },
+            // Stop at 50 if needed
+            if (currentDocId > 50) {
+              print("Reached the limit of 50 documents.");
+            }
+          },
+          child: Text("Copy to products/$currentDocId"),
+        ),
       ),
     );
   }

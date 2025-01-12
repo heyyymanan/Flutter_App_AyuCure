@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
         'p':(context)=>Login(),
         'o':(context)=>Product_detail(),
         'i':(context)=>Cart(),
-        'k':(context)=>test(),
+        't':(context)=>test(),
       }
     )
     );

@@ -7,8 +7,10 @@ class Search_bar extends StatelessWidget {
 
     final width=MediaQuery.of(context).size.width;
 
-    return Container(height: 50,width:width , margin: EdgeInsets.only(right: 10, left:10, top: 10,bottom: 15),
-        decoration: BoxDecoration(color: Color(0xffEBE0FF),borderRadius: BorderRadius.circular(30) ),
+    return Container(height: 50,
+        width:width,
+        margin: EdgeInsets.only(right: 6, left:6, top: 5,bottom: 10),
+        decoration: BoxDecoration(color: Color(0xffa68a64),borderRadius: BorderRadius.circular(30) ),
         child: Row(mainAxisAlignment: MainAxisAlignment.center,
             children: [TextButton(
                 onPressed: (){}, child: Icon(Icons.search,size: 30,color: Colors.black,)),

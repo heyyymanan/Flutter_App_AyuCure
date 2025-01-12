@@ -33,7 +33,7 @@ class Homepage extends State<HomePage> {
 
               //BANNER
               Container(
-                margin: EdgeInsets.only(right:10 ,left:10,bottom: 15 ),
+                margin: EdgeInsets.only(right:6 ,left:6,bottom: 0 ),
                   width: width, // Set the width of the container
                   height: 180, // Set the height of the container
                   decoration: BoxDecoration(
@@ -42,16 +42,30 @@ class Homepage extends State<HomePage> {
                         image: AssetImage('assets/media/SaleBanner.jpg'), // Replace with your image asset path
                         fit: BoxFit.cover, // Adjust the image fit
                       ))),
-
+              Divider(
+                color: Colors.grey,
+                thickness: .6,
+              ),
               //CATEGORY_filter
-              Category_filter(),//Custom
+              Category_filter(), //Custom
+              Divider(
+                color: Colors.grey,
+                thickness: .6,
+              ),
 
 
               //SPECIAL_FOR_YOU
-              Container(margin: EdgeInsets.only(top:0,left: 13,right: 5,bottom: 10),
+              Container(margin: EdgeInsets.only(top:0,left: 6,right: 6,bottom: 10),
+                padding: EdgeInsets.only(right: 5,left: 10),
+                decoration: BoxDecoration(
+                  // color: Color(0xffb07d62),
+                  borderRadius: BorderRadius.circular(10)
+                ),
                 child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(child: Text('Special For You',style: GoogleFonts.tinos(textStyle: TextStyle(fontSize: 20,fontWeight: FontWeight.bold)))),
+                    Container(child: Text('Special For You',
+                        style: GoogleFonts.tinos(
+                            textStyle: TextStyle(fontSize: 20)))),
                     TextButton(onPressed: (){}, child: Text('See all'))],
                 ),
               ),
@@ -60,7 +74,18 @@ class Homepage extends State<HomePage> {
               Wrap(spacing: 10,
                 runSpacing: 10,
                 children: [
-                  Product_card(product_no: 0)
+                  Product_card(product_no: 0),
+                  Product_card(product_no: 0),
+                  Product_card(product_no: 0),
+                  Product_card(product_no: 0),
+                  Product_card(product_no: 0),
+                  Product_card(product_no: 0),
+                  Product_card(product_no: 0),
+                  Product_card(product_no: 0),
+                  Product_card(product_no: 0),
+                  Product_card(product_no: 0),
+
+
 
                 ],),
               Container(
