@@ -1,3 +1,4 @@
+import 'package:ayucure/functions/MediaQuery_size.dart';
 import 'package:ayucure/widgets/Category_filter.dart';
 import 'package:ayucure/widgets/Home_drawer.dart';
 import 'package:ayucure/widgets/Search_bar.dart';
@@ -17,14 +18,16 @@ class Homepage extends State<HomePage> {
   Widget build(BuildContext context) {
     final width=MediaQuery.of(context).size.width;
     return Scaffold(
+      // backgroundColor: Color(0xffe0fbfc),
         drawer: Home_drawer(),
         appBar: AppBar(
+          toolbarHeight: 60,
           iconTheme: IconThemeData(color: Colors.white),
             centerTitle: true,
             title: Text('AyuCure',
                 style: GoogleFonts.corinthia(
                     textStyle:TextStyle(color: Colors.white,fontSize: 45))),
-            backgroundColor: Colors.black),
+            backgroundColor: Color(0xff2b2d42)),
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -33,19 +36,19 @@ class Homepage extends State<HomePage> {
 
               //BANNER
               Container(
-                margin: EdgeInsets.only(right:6 ,left:6,bottom: 0 ),
+                margin: EdgeInsets.only(right:0 ,left:0,bottom: 10 ),
                   width: width, // Set the width of the container
                   height: 180, // Set the height of the container
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20.0), // Round the edges
+                      // borderRadius: BorderRadius.circular(20.0), // Round the edges
                       image: DecorationImage(
                         image: AssetImage('assets/media/SaleBanner.jpg'), // Replace with your image asset path
                         fit: BoxFit.cover, // Adjust the image fit
                       ))),
-              Divider(
-                color: Colors.grey,
-                thickness: .6,
-              ),
+              // Divider(
+              //   color: Colors.grey,
+              //   thickness: .6,
+              // ),
               //CATEGORY_filter
               Category_filter(), //Custom
               Divider(
@@ -55,11 +58,12 @@ class Homepage extends State<HomePage> {
 
 
               //SPECIAL_FOR_YOU
-              Container(margin: EdgeInsets.only(top:0,left: 6,right: 6,bottom: 10),
+              Container(margin: EdgeInsets.only(top:0,left: 0,right: 0,bottom: 10),
+                height: context.percentHeight(4),
                 padding: EdgeInsets.only(right: 5,left: 10),
                 decoration: BoxDecoration(
-                  // color: Color(0xffb07d62),
-                  borderRadius: BorderRadius.circular(10)
+                  // color: Color(0xff2b2d42),
+                  borderRadius: BorderRadius.circular(0)
                 ),
                 child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
